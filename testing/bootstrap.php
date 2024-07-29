@@ -1,7 +1,7 @@
 <?php
 
 /**
- * AbraFlexi Relationship - Unit Test bootstrap
+ * AbraFlexi Enhancer - Unit Test bootstrap
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  * @copyright (c) 2020, Vítězslav Dvořák

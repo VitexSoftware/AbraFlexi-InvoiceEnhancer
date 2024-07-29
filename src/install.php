@@ -5,21 +5,19 @@
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
 
-namespace AbraFlexi\Relationship;
+namespace AbraFlexi\Enhancer;
 
-use Ease\TWB4\Row;
-use Ease\TWB4\WebPage;
-use Ease\TWB4\Container;
-use Ease\TWB4\Widgets\Toggle;
-use AbraFlexi\ui\TWB4\ConnectionForm;
+use Ease\TWB5\Row;
+use Ease\TWB5\WebPage;
+use Ease\TWB5\Container;
+use Ease\TWB5\Widgets\Toggle;
+use AbraFlexi\ui\TWB5\ConnectionForm;
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-define('EASE_APPNAME', _('Relationship Overview'));
+define('EASE_APPNAME', _('Enhancer Overview'));
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-$oPage = new WebPage(_('Button installer'));
+$oPage = new WebPage(_('Invoice Enhancer installer'));
 
 if (empty(\Ease\WebPage::getRequestValue('myurl'))) {
     $_REQUEST['myurl'] = dirname(\Ease\WebPage::phpSelf());
@@ -28,46 +26,46 @@ if (empty(\Ease\WebPage::getRequestValue('myurl'))) {
 $loginForm = new ConnectionForm(['action' => 'install.php']);
 
 $loginForm->addInput(
-    new Toggle(
-        'browser',
-        isset($_REQUEST) && array_key_exists('browser', $_REQUEST),
-        'automatic',
-        ['data-on' => _('AbraFlexi WebView'), 'data-off' => _('System Browser')]
-    ),
-    _('Open results in AbraFlexi WebView or in System default browser')
+        new Toggle(
+                'browser',
+                isset($_REQUEST) && array_key_exists('browser', $_REQUEST),
+                'automatic',
+                ['data-on' => _('AbraFlexi WebView'), 'data-off' => _('System Browser')]
+        ),
+        _('Open results in AbraFlexi WebView or in System default browser')
 );
 
 //$loginForm->addInput( new \Ease\Html\InputUrlTag('myurl'), _('My Url'), dirname(\Ease\Page::phpSelf()), sprintf( _('Same url as you can see in browser without %s'), basename( __FILE__ ) ) );
 
 $loginForm->fillUp($_REQUEST);
 
-$loginForm->addItem(new \Ease\TWB4\SubmitButton(_('Install Button'), 'success btn-lg btn-block'));
+$loginForm->addItem(new \Ease\TWB5\SubmitButton(_('Install Button'), 'success btn-lg btn-block'));
 
 $baseUrl = \Ease\WebPage::getRequestValue('myurl') . '/index.php?authSessionId=${authSessionId}&companyUrl=${companyUrl}';
 
-$buttonUrl = str_replace('http://', 'https://', $baseUrl . '&kod=${object.kod}&id=${object.id}') ;
+$buttonUrl = $baseUrl . '&kod=${object.kod}&id=${object.id}';
 
 if ($oPage->isPosted()) {
     $browser = isset($_REQUEST) && array_key_exists('browser', $_REQUEST) ? 'automatic' : 'desktop';
 
     $buttoner = new \AbraFlexi\RW(
-        null,
-        array_merge($_REQUEST, ['evidence' => 'custom-button'])
+            null,
+            array_merge($_REQUEST, ['evidence' => 'custom-button'])
     );
 
     $buttoner->logBanner();
 
-    $buttoner->insertToAbraFlexi(['id' => 'code:RELATIONSHIP', 'url' => $buttonUrl,
-        'title' => _('Relationship Overview'), 'description' => _('Relationship Overview generator/sender'),
-        'location' => 'detail', 'evidence' => 'adresar', 'browser' => $browser]);
+    $buttoner->insertToAbraFlexi(['id' => 'code:ENHANCER', 'url' => $buttonUrl,
+        'title' => _('Enhancer Overview'), 'description' => _('Enhancer Overview generator/sender'),
+        'location' => 'detail', 'evidence' => 'faktura-prijata', 'browser' => $browser]);
+
+    $buttoner->addStatusMessage($buttonUrl, 'debug');
 
     if ($buttoner->lastResponseCode == 201) {
         $buttoner->addStatusMessage(
-            _('Relationship Overview Button created'),
-            'success'
+                _('Enhancer Overview Button created'),
+                'success'
         );
-
-        $loginForm->addItem(Digestor::$logo);
 
         define('ABRAFLEXI_COMPANY', $buttoner->getCompany());
     }
@@ -80,9 +78,8 @@ if ($oPage->isPosted()) {
 $setupRow = new Row();
 $setupRow->addColumn(6, $loginForm);
 
-
 $oPage->addItem(new Container($setupRow));
 
-$oPage->addItem(new \Ease\Html\FooterTag());
+$oPage->addItem(new \Ease\Html\FooterTag(new \Ease\TWB5\Container(WebPage::singleton()->getStatusMessagesBlock())));
 
 echo $oPage;

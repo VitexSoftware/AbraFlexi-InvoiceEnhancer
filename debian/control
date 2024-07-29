@@ -1,16 +1,16 @@
-Source: abraflexi-relationship
+Source: abraflexi-enhancer
 Section: unknown
 Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
 Build-Depends: debhelper-compat (= 12), php-curl
 Standards-Version: 4.5.0
-Homepage: https://github.com/Vitexus/RelationshipOverview
-#Vcs-Git: https://salsa.debian.org/debian/abraflexi-relationship.git
-#Vcs-Browser: https://salsa.debian.org/debian/abraflexi-relationship
+Homepage: https://github.com/Vitexus/EnhancerOverview
+#Vcs-Git: https://salsa.debian.org/debian/abraflexi-enhancer.git
+#Vcs-Browser: https://salsa.debian.org/debian/abraflexi-enhancer
 
-Package: abraflexi-relationship
+Package: abraflexi-enhancer
 Architecture: all
-Depends: ${shlibs:Depends}, composer-debian, php-spojenet-abraflexi, php-vitexsoftware-abraflexi-bricks, php-vitexsoftware-ease-bootstrap4-widgets, php-vitexsoftware-ease-bootstrap4-widgets-abraflexi,
+Depends: ${shlibs:Depends}, composer-debian, php-spojenet-abraflexi, php-vitexsoftware-abraflexi-bricks, php-vitexsoftware-ease-bootstrap5-widgets, php-vitexsoftware-ease-bootstrap5-widgets-abraflexi,
 	${misc:Depends}
-Description: Relationship with customer report generator for AbraFlexi
- Add button "Relationship" into your AbraFlexi 
+Description: Enhancer with customer report generator for AbraFlexi
+ Add button "Enhancer" into your AbraFlexi 

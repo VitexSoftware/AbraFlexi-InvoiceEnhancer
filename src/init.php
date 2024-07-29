@@ -1,23 +1,21 @@
 <?php
 
 /**
- * AbraFlexi Button installer page
+ * AbraFlexi Invoice Enhancer Installer
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright (c) 2019-2024, Vitex Software
+ * @copyright (c) 2024, Vitex Software
  */
 
-namespace AbraFlexi\Relationship;
+namespace AbraFlexi\Enhancer;
 
-use Ease\TWB4\WebPage;
+use Ease\TWB5\WebPage;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-define('MODULE_PATH', './modules');
-
 session_start();
 
-new \Ease\Locale(null, '../i18n', 'abraflexi-relationship');
+new \Ease\Locale(null, '../i18n', 'abraflexi-invoice-enhancer');
 
 $oPage = new WebPage();
 
@@ -34,21 +32,22 @@ if (array_key_exists('connection', $_SESSION)) {
     define('ABRAFLEXI_AUTHSESSID', $_SESSION['connection']['authSessionId']);
     define('ABRAFLEXI_COMPANY', $_SESSION['connection']['company']);
 } else {
-    $localCfg = '../testing/client.json';
+    $localCfg = '../testing/.env';
     if (file_exists($localCfg)) {
         $shared = \Ease\Shared::instanced();
         $shared->loadConfig($localCfg, true);
     } else {
         if (\Ease\WebPage::getRequestValue('kod')) {
-            $oPage->addItem(new \Ease\TWB4\LinkButton(
-                'JavaScript:self.close()',
-                _('Session Expired'),
-                'danger'
+            $oPage->addItem(new \Ease\TWB5\LinkButton(
+                            'JavaScript:self.close()',
+                            _('Session Expired'),
+                            'danger'
             ));
         } else {
             $oPage->redirect('install.php');
+            echo $oPage->draw();
+            exit();
         }
     }
 }
 
-echo $oPage->draw();

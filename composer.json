@@ -1,11 +1,12 @@
 {
-    "name": "vitexsoftware/relationship-overview",
-    "description": "Relationship with customer report generator for AbraFlexi",
+    "name": "vitexsoftware/abraflexi-invoice-enhancer",
+    "description": "Invoice Enhancer for AbraFlexi",
     "type": "project",
     "version": "0.1",
     "require": {
-        "vitexsoftware/ease-twbootstrap4-widgets-flexibee": "*",
-        "vitexsoftware/ease-twbootstrap4-widgets": "*"
+        "vitexsoftware/ease-twbootstrap5": "dev-main",
+        "vitexsoftware/ease-bootstrap5-widgets-abraflexi": "dev-main",
+        "vitexsoftware/ease-bootstrap5-widgets": "dev-master"
     },
     "license": "MIT",
     "authors": [
@@ -14,10 +15,10 @@
             "email": "info@vitexsoftware.cz"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "AbraFlexi\\Relationship\\": "src/Relationship/"
+            "AbraFlexi\\Enhancer\\": "src/Enhancer/"
         }
     }
 }

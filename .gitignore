@@ -2,7 +2,7 @@
 /nbproject/private/
 /composer.lock
 /debian/conf/ssmtp.conf
-/debian/relationship-overview/
+/debian/enhancer-overview/
 /debian/.debhelper/
-/debian/abraflexi-relationship/
+/debian/abraflexi-enhancer/
 /debian/

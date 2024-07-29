@@ -1,10 +1,10 @@
-abraflexi-relationship for Debian
+abraflexi-enhancer for Debian
 
 
 package provide apache configuration. Enable it using command
 
-    a2enconf abraflexi-relationship
+    a2enconf abraflexi-enhancer
     
-    then you can target your browser to http://localhost/abraflexi-relationship/
+    then you can target your browser to http://localhost/abraflexi-enhancer/
 
  -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 20 Dec 2021 22:16:52 +0100

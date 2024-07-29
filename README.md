@@ -1,20 +1,14 @@
 ![project logo](project-logo.png?raw=true)
 
-Přehled vztahu s klientem pro AbraFlexi
-=======================================
+Invoice Enhancer for AbraFlexi
+==============================
+
+[![wakatime](https://wakatime.com/badge/user/5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/project/0200f761-5082-47b3-abf9-3f393a268050.svg)](https://wakatime.com/badge/user/5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/project/0200f761-5082-47b3-abf9-3f393a268050)
 
 Použití
 -------
 
-Do Adresáře AbraFlexi přidá tlačítko "Přehled vztahu" kterým se aplikace volá.
-
-Nejprve je třeba zvolit jaké moduly budou při generování vztahu použity a za
-jaký časový úsek se budou data zpracovávat.
-
-![settings](settings.png?raw=true)
-
-Po odeslání tlačítkem "Vygeneruj report" je tento vygenerován a zobrazen. 
-Současně je tento i odeslán mailem na uvedenou adresu klienta.
+Do Přijatých Faktur ve AbraFlexi přidá tlačítko "Vylepšovač" kterým se aplikace volá.
 
 Instalace
 ---------
@@ -22,24 +16,24 @@ Instalace
 V browseru je třeba ručně otevřít stránku [install.php](src/install.php)
 
 Do formuláře se vyplní přístupové údaje do AbraFlexi. 
-Pokud jsou tyto správné, vytvoří se ve AbraFlexi v evidenci adresáře spouštěcí tlačítko.
+Pokud jsou tyto správné, vytvoří se ve AbraFlexi v evidenci přijaté faktury spouštěcí tlačítko.
 
 (Pokud se nepovede autodetekce serveru a portu, zkopírujte prosím tuto hodnotu z adresního řádku do příslušného políčka)
 
-Aplikace v chodu je k vyzkoušení [abraflexi-relationship.vitexsoftware.com](https://abraflexi-relationship.vitexsoftware.com/)
+Aplikace v chodu je k vyzkoušení [abraflexi-enhancer.vitexsoftware.com](https://abraflexi-enhancer.vitexsoftware.com/)
 
 Testování
 ---------
 
-Pokud není stránka volána s parametry $authSessionId && $companyUrl pokusí se načíst konfigurák ../testing/client.json
+Pokud není stránka volána s parametry $authSessionId && $companyUrl pokusí se načíst konfigurák ../testing/.env
 
 Nasazení
 --------
 
-K dispozici je Docker image: https://hub.docker.com/r/vitexsoftware/abraflexi-relationship-overview/tags
+K dispozici je Docker image: https://hub.docker.com/r/vitexsoftware/abraflexi-enhancer-overview/tags
 
 ```
-docker run -d -p ${OUTPORT}:${INPORT} --name ${CONTNAME} vitexsoftware/abraflexi-relationship
+docker run -d -p ${OUTPORT}:${INPORT} --name ${CONTNAME} vitexsoftware/abraflexi-enhancer
 ```
 
 Nebo debianí balíček k instalaci na server se sytémem Debian či Ubuntu:
@@ -51,14 +45,14 @@ sudo wget -O /usr/share/keyrings/vitexsoftware.gpg https://repo.vitexsoftware.cz
 echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg]  https://repo.vitexsoftware.com  $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
 sudo apt update
 
-sudo apt install abraflexi-relationship
+sudo apt install abraflexi-enhancer
 ```
 
 Pokud používáte apache, je třeba aktivovat jeho konfiguraci:
 
 ```
-a2enconf abraflexi-relationship
+a2enconf abraflexi-enhancer
 apache2ctl restart
 ```
 
-Poté je aplikace dostupná bez další konfigurace na http://0.0.0.0/abraflexi-relationship/
+Poté je aplikace dostupná bez další konfigurace na http://0.0.0.0/abraflexi-enhancer/
