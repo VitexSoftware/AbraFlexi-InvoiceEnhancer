@@ -13,7 +13,7 @@ use Ease\TWB5\Container;
 use Ease\TWB5\Widgets\Toggle;
 use AbraFlexi\ui\TWB5\ConnectionForm;
 
-define('EASE_APPNAME', _('Enhancer Overview'));
+define('EASE_APPNAME', _('InvoiceEnhancer'));
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
@@ -39,7 +39,7 @@ $loginForm->addInput(
 
 $loginForm->fillUp($_REQUEST);
 
-$loginForm->addItem(new \Ease\TWB5\SubmitButton(_('Install Button'), 'success btn-lg btn-block'));
+$loginForm->addItem(new \Ease\TWB5\SubmitButton(_('Install Button to AbraFlexi'), 'success btn-lg btn-block'));
 
 $baseUrl = \Ease\WebPage::getRequestValue('myurl') . '/index.php?authSessionId=${authSessionId}&companyUrl=${companyUrl}';
 
@@ -56,14 +56,14 @@ if ($oPage->isPosted()) {
     $buttoner->logBanner();
 
     $buttoner->insertToAbraFlexi(['id' => 'code:ENHANCER', 'url' => $buttonUrl,
-        'title' => _('Enhancer Overview'), 'description' => _('Enhancer Overview generator/sender'),
+        'title' => _('Invoice Enhancer'), 'description' => _('Invoice items to Pricelist Items convertor'),
         'location' => 'detail', 'evidence' => 'faktura-prijata', 'browser' => $browser]);
 
     $buttoner->addStatusMessage($buttonUrl, 'debug');
 
     if ($buttoner->lastResponseCode == 201) {
         $buttoner->addStatusMessage(
-                _('Enhancer Overview Button created'),
+                _('Invoice Enhancer Button created'),
                 'success'
         );
 
