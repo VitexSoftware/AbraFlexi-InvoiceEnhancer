@@ -33,7 +33,8 @@ if (empty($kod)) {
         if ($exc->getCode() == 401) {
             $oPage->body->addItem(new \Ease\Html\H2Tag(_('Session Expired')));
         } else {
-            echo $exc->getTraceAsString();
+            $oPage->addItem(new \Ease\Html\H1Tag($exc->getMessage()));
+            $oPage->addItem(new \Ease\Html\PreTag($exc->getTraceAsString()));
         }
     }
 }

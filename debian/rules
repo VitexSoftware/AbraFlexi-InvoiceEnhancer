@@ -17,5 +17,4 @@ override_dh_install:
 	sed -i -e '/require_once/c\require_once "\/var\/lib\/composer\/abraflexi-enhancer/autoload.php";' debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/*.php
 	sed -i -e 's/..\/i18n/\/usr\/share\/locale/g'            	        debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/init.php
 	sed -i -e 's/\.\./\/etc\/abraflexi/g'                                   debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/init.php
-	sed -i -e "/MODULE_PATH/c\define('MODULE_PATH', '/usr/lib/abraflexi-enhancer/modules');"          debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/init.php
-	sed -i -e 's/\.\./\/usr\/lib\/abraflexi-enhancer/'       debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/Enhancer/Digestor.php
+	sed -i -e 's/\.\./\/usr\/lib\/abraflexi-enhancer/'       debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/Enhancer/*.php

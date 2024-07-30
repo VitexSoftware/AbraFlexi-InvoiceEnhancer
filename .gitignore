@@ -1,8 +1,9 @@
 /vendor/
 /nbproject/private/
 /composer.lock
-/debian/conf/ssmtp.conf
-/debian/enhancer-overview/
 /debian/.debhelper/
+/debian/abraflexi-enhancer.debhelper.log
+/debian/abraflexi-enhancer.substvars
+/debian/debhelper-build-stamp
+/debian/files
 /debian/abraflexi-enhancer/
-/debian/

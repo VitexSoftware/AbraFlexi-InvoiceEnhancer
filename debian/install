@@ -1,11 +1,7 @@
 debian/composer.json       	usr/lib/abraflexi-enhancer/
 debian/conf/abraflexi-enhancer.conf /etc/apache2/conf-available/
 src/*.php		        usr/share/abraflexi-enhancer/
-src/modules/*		        usr/lib/abraflexi-enhancer/modules
-src/Enhancer/*              usr/lib/abraflexi-enhancer/Enhancer/
-src/css/*.css                   usr/share/abraflexi-enhancer/css/
-#src/css/themes/*.css            usr/share/abraflexi-enhancer/css/themes
-#bin/*                           usr/bin/
+src/Enhancer/*                  usr/lib/abraflexi-enhancer/Enhancer/
+src/Enhancer/ui/*               usr/lib/abraflexi-enhancer/Enhancer/ui/
 i18n/cs_CZ/LC_MESSAGES/*.mo     usr/share/locale/cs_CZ/LC_MESSAGES
 i18n/en_US/LC_MESSAGES/*.mo     usr/share/locale/en_US/LC_MESSAGES
-#debian/conf/enhancer.json   etc/abraflexi/
