@@ -34,30 +34,34 @@ class InvoiceForm extends \Ease\TWB5\Panel {
         $itemsTable = new \Ease\TWB5\Table();
         $itemsTable->addRowHeaderColumns(['kod' => _('Code'), 'ean' => _('EAN'), 'name' => _('Name'), 'price' => _('Price'), 'x' => _('Convert')]);
 
-        foreach ($invoice->getSubItems() as $item) {
-            switch ($item['typPolozkyK']) {
-                case 'typPolozky.obecny':
-                    $itemsTable->addRowColumns([
-                        'kod' => $item['kod'], // new \Ease\Html\InputTextTag('kod[' . $item['id'] . ']', $item['kod']),
-                        'ean' => empty($item['eanKod']) ? '' : $item['eanKod'], // [ new \Ease\Html\InputHiddenTag('ean[' . $item['id'] . ']', $item['eanKod']) , $item['eanKod'], new \Ease\Html\ATag('https://www.ean-search.org/ean/' . $item['eanKod'], '❓', ['target' => '_blank'])],
-                        'name' => $item['nazev'], // $nameInput,
-                        'price' => $item['cenaMj'] . ' ' . \AbraFlexi\Functions::uncode($item['mena']), // [new \Ease\Html\InputTextTag('cenaMj[' . $item['id'] . ']', $item['cenaMj']), \AbraFlexi\Functions::uncode($item['mena'])],
-                        'convert' => new \Ease\TWB5\Widgets\Toggle('convert[' . $item['id'] . ']', !empty($item['eanKod']), $item['id'])
-                    ]);
-                    break;
-                case 'typPolozky.katalog':
-                    $itemsTable->addRowColumns([
-                        'kod' => $item['kod'],
-                        'ean' => empty($item['eanKod']) ? '' : $item['eanKod'],
-                        'name' => $item['nazev'],
-                        'price' => $item['cenaMj'] . ' ' . \AbraFlexi\Functions::uncode($item['mena']),
-                        'convert' => '✅'
-                    ]);
-                    break;
+        if ($invoice->getSubItems()) {
+            foreach ($invoice->getSubItems() as $item) {
+                switch ($item['typPolozkyK']) {
+                    case 'typPolozky.obecny':
+                        $itemsTable->addRowColumns([
+                            'kod' => $item['kod'], // new \Ease\Html\InputTextTag('kod[' . $item['id'] . ']', $item['kod']),
+                            'ean' => empty($item['eanKod']) ? '' : $item['eanKod'], // [ new \Ease\Html\InputHiddenTag('ean[' . $item['id'] . ']', $item['eanKod']) , $item['eanKod'], new \Ease\Html\ATag('https://www.ean-search.org/ean/' . $item['eanKod'], '❓', ['target' => '_blank'])],
+                            'name' => $item['nazev'], // $nameInput,
+                            'price' => $item['cenaMj'] . ' ' . \AbraFlexi\Functions::uncode($item['mena']), // [new \Ease\Html\InputTextTag('cenaMj[' . $item['id'] . ']', $item['cenaMj']), \AbraFlexi\Functions::uncode($item['mena'])],
+                            'convert' => new \Ease\TWB5\Widgets\Toggle('convert[' . $item['id'] . ']', !empty($item['eanKod']), $item['id'])
+                        ]);
+                        break;
+                    case 'typPolozky.katalog':
+                        $itemsTable->addRowColumns([
+                            'kod' => $item['kod'],
+                            'ean' => empty($item['eanKod']) ? '' : $item['eanKod'],
+                            'name' => $item['nazev'],
+                            'price' => $item['cenaMj'] . ' ' . \AbraFlexi\Functions::uncode($item['mena']),
+                            'convert' => '✅'
+                        ]);
+                        break;
 
-                default:
-                    break;
+                    default:
+                        break;
+                }
             }
+        } else {
+            $this->addStatusMessage(_('No Subitems in thi invoice'), 'info');
         }
         return $itemsTable;
     }
