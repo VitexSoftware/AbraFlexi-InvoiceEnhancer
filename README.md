@@ -10,6 +10,14 @@ Použití
 
 Do Přijatých Faktur ve AbraFlexi přidá tlačítko "Vylepšovač" kterým se aplikace volá.
 
+![Trigger](trigger.png?raw=true)
+
+
+![Pricelist Item](pricelist-item.png?raw=true)
+
+![Conversion Done](conversion-done.png?raw=true)
+
+
 Instalace
 ---------
 
