@@ -39,5 +39,5 @@ if (empty($kod)) {
     }
 }
 
-$oPage->addItem($oPage->getStatusMessagesBlock());
+$oPage->addItem(new ui\PageBottom());
 echo $oPage;

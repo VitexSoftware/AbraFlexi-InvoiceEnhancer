@@ -2,10 +2,10 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   height="48"
-   width="48"
+   height="500"
+   width="500"
    version="1.1"
-   viewBox="0 0 12.7 12.7"
+   viewBox="0 0 132.29167 132.29167"
    id="svg16"
    sodipodi:docname="project-logo.svg"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -47,9 +47,9 @@
      inkscape:window-height="1120"
      id="namedview18"
      showgrid="false"
-     inkscape:zoom="9.8333332"
-     inkscape:cx="65.288136"
-     inkscape:cy="12.915254"
+     inkscape:zoom="0.86915208"
+     inkscape:cx="522.34817"
+     inkscape:cy="254.27081"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -66,137 +66,140 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="matrix(0.39321554,0,0,0.39321554,0.66785294,-111.39333)"
-     id="g14">
+     id="g160"
+     transform="matrix(10.391087,0,0,10.391087,-0.08382371,0.11387708)">
     <g
-       style="image-rendering:optimizeQuality;shape-rendering:geometricPrecision"
-       clip-rule="evenodd"
-       transform="matrix(0.015609,0,0,-0.015609,-18.251,294.31)"
-       id="g12">
-      <path
-         d="M 1708.7,0 1842.5,231.62 1976.2,0 Z"
-         fill="#f9ae2d"
-         id="path4" />
-      <path
-         d="m 1708.7,0 -133.75,231.62 h 267.53 z"
-         fill="#d28b25"
-         id="path6" />
-      <path
-         d="M 1574.9,231.62 1708.65,463.3 1842.43,231.62 Z"
-         fill="#936327"
-         id="path8" />
-      <path
-         d="M 1708.7,463.3 H 1441.2 L 1173.6,0 h 267.56 l 267.47,463.3"
-         fill="#767a7c"
-         id="path10" />
+       transform="matrix(0.39321554,0,0,0.39321554,0.66785294,-111.39333)"
+       id="g14">
+      <g
+         style="image-rendering:optimizeQuality;shape-rendering:geometricPrecision"
+         clip-rule="evenodd"
+         transform="matrix(0.015609,0,0,-0.015609,-18.251,294.31)"
+         id="g12">
+        <path
+           d="M 1708.7,0 1842.5,231.62 1976.2,0 Z"
+           fill="#f9ae2d"
+           id="path4" />
+        <path
+           d="m 1708.7,0 -133.75,231.62 h 267.53 z"
+           fill="#d28b25"
+           id="path6" />
+        <path
+           d="M 1574.9,231.62 1708.65,463.3 1842.43,231.62 Z"
+           fill="#936327"
+           id="path8" />
+        <path
+           d="M 1708.7,463.3 H 1441.2 L 1173.6,0 h 267.56 l 267.47,463.3"
+           fill="#767a7c"
+           id="path10" />
+      </g>
     </g>
-  </g>
-  <g
-     id="Page-1"
-     stroke="none"
-     stroke-width="1"
-     fill="none"
-     fill-rule="evenodd"
-     transform="matrix(0.25482945,0,0,0.25482945,4.5280564,0.04988519)">
     <g
-       id="Icon/Light/Agenda/Pricelist">
-      <path
-         id="Rectangle"
-         d="M 0,0 H 32 V 32 H 0 Z" />
-      <path
-         d="M 26,7.75 H 6 A 1.246,1.246 0 0 0 4.75,9 v 3.475 c 0.88,0.347 1.553,0.767 2.03,1.245 0.652,0.651 0.97,1.413 0.97,2.28 0,0.867 -0.318,1.629 -0.97,2.28 -0.477,0.478 -1.15,0.898 -2.03,1.245 V 23 A 1.246,1.246 0 0 0 6,24.25 H 26 A 1.246,1.246 0 0 0 27.25,23 V 19.525 C 26.37,19.178 25.697,18.758 25.22,18.28 24.568,17.629 24.25,16.867 24.25,16 c 0,-0.867 0.318,-1.629 0.97,-2.28 0.477,-0.478 1.15,-0.898 2.03,-1.245 V 9 A 1.246,1.246 0 0 0 26,7.75 Z"
-         id="svg380-Rectangle"
-         stroke="#1e1b18"
-         stroke-width="1.5" />
-      <path
-         d="m 16,19.5 a 1,1 0 1 1 0,2 1,1 0 0 1 0,-2 z m 5.182,-4.25 a 0.75,0.75 0 0 1 0,1.5 h -10.5 a 0.75,0.75 0 1 1 0,-1.5 z M 16,10.5 a 1,1 0 1 1 0,2 1,1 0 0 1 0,-2 z"
-         id="Combined-Shape"
-         fill="#004b96"
-         transform="rotate(-45,15.932,16)" />
+       id="Page-1"
+       stroke="none"
+       stroke-width="1"
+       fill="none"
+       fill-rule="evenodd"
+       transform="matrix(0.25482945,0,0,0.25482945,4.5280564,0.04988519)">
+      <g
+         id="Icon/Light/Agenda/Pricelist">
+        <path
+           id="Rectangle"
+           d="M 0,0 H 32 V 32 H 0 Z" />
+        <path
+           d="M 26,7.75 H 6 A 1.246,1.246 0 0 0 4.75,9 v 3.475 c 0.88,0.347 1.553,0.767 2.03,1.245 0.652,0.651 0.97,1.413 0.97,2.28 0,0.867 -0.318,1.629 -0.97,2.28 -0.477,0.478 -1.15,0.898 -2.03,1.245 V 23 A 1.246,1.246 0 0 0 6,24.25 H 26 A 1.246,1.246 0 0 0 27.25,23 V 19.525 C 26.37,19.178 25.697,18.758 25.22,18.28 24.568,17.629 24.25,16.867 24.25,16 c 0,-0.867 0.318,-1.629 0.97,-2.28 0.477,-0.478 1.15,-0.898 2.03,-1.245 V 9 A 1.246,1.246 0 0 0 26,7.75 Z"
+           id="svg380-Rectangle"
+           stroke="#1e1b18"
+           stroke-width="1.5" />
+        <path
+           d="m 16,19.5 a 1,1 0 1 1 0,2 1,1 0 0 1 0,-2 z m 5.182,-4.25 a 0.75,0.75 0 0 1 0,1.5 h -10.5 a 0.75,0.75 0 1 1 0,-1.5 z M 16,10.5 a 1,1 0 1 1 0,2 1,1 0 0 1 0,-2 z"
+           id="Combined-Shape"
+           fill="#004b96"
+           transform="rotate(-45,15.932,16)" />
+      </g>
     </g>
-  </g>
-  <g
-     id="Page-1-3"
-     stroke="none"
-     stroke-width="1"
-     fill="none"
-     fill-rule="evenodd"
-     transform="matrix(0.25482945,0,0,0.25482945,0.06479898,4.5049182)">
     <g
-       id="Icon/Light/Agenda/Puchase">
-      <path
-         id="Rectangle-6"
-         d="M 0,0 H 32 V 32 H 0 Z" />
-      <path
-         d="m 7,5 h 10 l 4,4 v 16 a 2,2 0 0 1 -2,2 H 7 A 2,2 0 0 1 5,25 V 7 A 2,2 0 0 1 7,5 Z m 10,0 v 4 h 4"
-         id="Combined-Shape-7"
-         stroke="#1e1b18"
-         stroke-width="1.5"
-         stroke-linejoin="round" />
-      <rect
-         id="svg382-Rectangle"
-         fill="#004b96"
-         x="8"
-         y="12"
-         width="8"
-         height="1.5"
-         rx="0.75" />
-      <rect
-         id="svg383-Rectangle"
-         fill="#004b96"
-         x="8"
-         y="16"
-         width="10"
-         height="1.5"
-         rx="0.75" />
-      <rect
-         id="svg384-Rectangle"
-         fill="#004b96"
-         x="8"
-         y="20"
-         width="5"
-         height="1.5"
-         rx="0.75" />
-      <circle
-         id="Oval"
-         fill="#ffffff"
-         cx="22"
-         cy="22"
-         r="8" />
-      <circle
-         id="svg385-Oval"
-         stroke="#1e1b18"
-         stroke-width="1.5"
-         cx="22"
-         cy="22"
-         r="6.25" />
-      <rect
-         id="svg386-Rectangle"
-         fill="#004b96"
-         x="19"
-         y="21.25"
-         width="6"
-         height="1.5"
-         rx="0.75" />
+       id="Page-1-3"
+       stroke="none"
+       stroke-width="1"
+       fill="none"
+       fill-rule="evenodd"
+       transform="matrix(0.25482945,0,0,0.25482945,0.06479898,4.5049182)">
+      <g
+         id="Icon/Light/Agenda/Puchase">
+        <path
+           id="Rectangle-6"
+           d="M 0,0 H 32 V 32 H 0 Z" />
+        <path
+           d="m 7,5 h 10 l 4,4 v 16 a 2,2 0 0 1 -2,2 H 7 A 2,2 0 0 1 5,25 V 7 A 2,2 0 0 1 7,5 Z m 10,0 v 4 h 4"
+           id="Combined-Shape-7"
+           stroke="#1e1b18"
+           stroke-width="1.5"
+           stroke-linejoin="round" />
+        <rect
+           id="svg382-Rectangle"
+           fill="#004b96"
+           x="8"
+           y="12"
+           width="8"
+           height="1.5"
+           rx="0.75" />
+        <rect
+           id="svg383-Rectangle"
+           fill="#004b96"
+           x="8"
+           y="16"
+           width="10"
+           height="1.5"
+           rx="0.75" />
+        <rect
+           id="svg384-Rectangle"
+           fill="#004b96"
+           x="8"
+           y="20"
+           width="5"
+           height="1.5"
+           rx="0.75" />
+        <circle
+           id="Oval"
+           fill="#ffffff"
+           cx="22"
+           cy="22"
+           r="8" />
+        <circle
+           id="svg385-Oval"
+           stroke="#1e1b18"
+           stroke-width="1.5"
+           cx="22"
+           cy="22"
+           r="6.25" />
+        <rect
+           id="svg386-Rectangle"
+           fill="#004b96"
+           x="19"
+           y="21.25"
+           width="6"
+           height="1.5"
+           rx="0.75" />
+      </g>
     </g>
-  </g>
-  <g
-     id="g3236"
-     transform="matrix(0.0141124,-0.01168672,-0.01287929,-0.0155525,7.9208496,20.478556)">
-    <path
-       id="path2388"
-       sodipodi:nodetypes="cccccsccc"
-       style="fill:#8e8e8e;fill-rule:evenodd;stroke:#000000;stroke-width:6.8;filter:url(#filter3232)"
-       d="m 385.54,459.3 c 63.33,-11.33 101.34,-9.38 125.15,0 -4.08,14 -19.27,24.52 -33.23,36.77 27.4,-13.11 55.19,-25.08 84.15,-36.07 -8.34,-34.82 -36.77,-54.13 -60.81,-78.48 3.52,8.18 8.64,17.16 12.08,25.32 1.73,4.09 2.49,7.79 1.35,10.74 -41.72,-13.9 -83.44,-13.43 -125.16,-2.83 z" />
-    <path
-       id="path3194"
-       sodipodi:nodetypes="cccccsccc"
-       style="fill:#0c3bfe;fill-rule:evenodd;stroke:#000000;stroke-width:6.8"
-       d="m 384.11,448.58 c 63.34,-11.32 101.34,-9.38 125.16,0 -4.09,14.01 -19.27,24.53 -33.24,36.77 27.4,-13.1 55.19,-25.08 84.15,-36.06 -8.34,-34.83 -36.77,-54.14 -60.81,-78.49 3.52,8.19 8.65,17.16 12.08,25.32 1.73,4.09 2.49,7.8 1.35,10.74 -41.72,-13.89 -83.44,-13.43 -125.16,-2.83 z" />
+    <g
+       id="g3236"
+       transform="matrix(0.0141124,-0.01168672,-0.01287929,-0.0155525,7.9208496,20.478556)">
+      <path
+         id="path2388"
+         sodipodi:nodetypes="cccccsccc"
+         style="fill:#8e8e8e;fill-rule:evenodd;stroke:#000000;stroke-width:6.8;filter:url(#filter3232)"
+         d="m 385.54,459.3 c 63.33,-11.33 101.34,-9.38 125.15,0 -4.08,14 -19.27,24.52 -33.23,36.77 27.4,-13.11 55.19,-25.08 84.15,-36.07 -8.34,-34.82 -36.77,-54.13 -60.81,-78.48 3.52,8.18 8.64,17.16 12.08,25.32 1.73,4.09 2.49,7.79 1.35,10.74 -41.72,-13.9 -83.44,-13.43 -125.16,-2.83 z" />
+      <path
+         id="path3194"
+         sodipodi:nodetypes="cccccsccc"
+         style="fill:#0c3bfe;fill-rule:evenodd;stroke:#000000;stroke-width:6.8"
+         d="m 384.11,448.58 c 63.34,-11.32 101.34,-9.38 125.16,0 -4.09,14.01 -19.27,24.53 -33.24,36.77 27.4,-13.1 55.19,-25.08 84.15,-36.06 -8.34,-34.83 -36.77,-54.14 -60.81,-78.49 3.52,8.19 8.65,17.16 12.08,25.32 1.73,4.09 2.49,7.8 1.35,10.74 -41.72,-13.89 -83.44,-13.43 -125.16,-2.83 z" />
+    </g>
   </g>
 </svg>

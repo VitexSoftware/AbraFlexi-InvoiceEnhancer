@@ -39,6 +39,8 @@ $loginForm->addInput(
 
 $loginForm->fillUp($_REQUEST);
 
+$loginForm->addItem(new \Ease\Html\PTag());
+
 $loginForm->addItem(new \Ease\TWB5\SubmitButton(_('Install Button to AbraFlexi'), 'success btn-lg btn-block'));
 
 $baseUrl = \Ease\WebPage::getRequestValue('myurl') . '/index.php?authSessionId=${authSessionId}&companyUrl=${companyUrl}';
@@ -62,11 +64,7 @@ if ($oPage->isPosted()) {
     $buttoner->addStatusMessage($buttonUrl, 'debug');
 
     if ($buttoner->lastResponseCode == 201) {
-        $buttoner->addStatusMessage(
-                _('Invoice Enhancer Button created'),
-                'success'
-        );
-
+        $buttoner->addStatusMessage(_('Invoice Enhancer Button created'), 'success');
         define('ABRAFLEXI_COMPANY', $buttoner->getCompany());
     }
 } else {
@@ -76,10 +74,13 @@ if ($oPage->isPosted()) {
 
 
 $setupRow = new Row();
+$setupRow->addColumn(2, new ui\AppLogo(['class'=>'img-fluid']));
 $setupRow->addColumn(6, $loginForm);
+
+$oPage->addItem(new Container(new \Ease\Html\H1Tag(_('AbraFlexi Invoice Enhancer'))));
 
 $oPage->addItem(new Container($setupRow));
 
-$oPage->addItem(new \Ease\Html\FooterTag(new \Ease\TWB5\Container(WebPage::singleton()->getStatusMessagesBlock())));
+$oPage->addItem(new ui\PageBottom());
 
 echo $oPage;
