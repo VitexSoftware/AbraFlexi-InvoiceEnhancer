@@ -103,7 +103,7 @@ class InvoiceEnhancer extends FakturaPrijata {
 
         try {
             $this->pricer->insertToAbraFlexi();
-            $this->pricer->addStatusMessage('supplier price update: ' . RO::uncode($this->pricelist->getRecordCode()) . ': ' . $this->pricer->getDataValue('nakupCena') . ' ' . RO::uncode($this->pricer->getDataValue('mena')), $this->pricer->lastResponseCode == 201 ? 'success' : 'error');
+            $this->pricer->addStatusMessage(_('supplier price update') . ': ' . RO::uncode($this->pricelist->getRecordCode()) . ': ' . $this->pricer->getDataValue('nakupCena') . ' ' . RO::uncode($this->pricer->getDataValue('mena')), $this->pricer->lastResponseCode == 201 ? 'success' : 'error');
         } catch (Exception $exc) {
             echo new H1Tag($exc->getMessage());
             echo new PreTag($exc->getTraceAsString());

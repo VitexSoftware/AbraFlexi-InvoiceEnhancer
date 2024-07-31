@@ -61,7 +61,7 @@ class InvoiceForm extends \Ease\TWB5\Panel {
                 }
             }
         } else {
-            $this->addStatusMessage(_('No Subitems in thi invoice'), 'info');
+            $this->addStatusMessage(_('No Subitems in this invoice'), 'info');
         }
         return $itemsTable;
     }
