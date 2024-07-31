@@ -10,7 +10,7 @@ Homepage: https://github.com/Vitexus/EnhancerOverview
 
 Package: abraflexi-enhancer
 Architecture: all
-Depends: ${shlibs:Depends}, composer-debian, php-spojenet-abraflexi, php-vitexsoftware-abraflexi-bricks, php-vitexsoftware-ease-bootstrap5-widgets, php-vitexsoftware-ease-bootstrap5-widgets-abraflexi,
+Depends: ${shlibs:Depends}, composer-debian, php-spojenet-abraflexi, php-vitexsoftware-abraflexi-bricks, php-vitexsoftware-ease-bootstrap5-widgets, php-vitexsoftware-ease-bootstrap5-widgets-abraflexi,php-vitexsoftware-abraflexi-bricks
 	${misc:Depends}
 Description: Enhancer with customer report generator for AbraFlexi
  Add button "Enhancer" into your AbraFlexi 
