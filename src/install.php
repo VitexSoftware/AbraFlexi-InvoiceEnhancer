@@ -2,7 +2,7 @@
 
 /**
  * AbraFlexi Custom Button Installer
- * 
+ *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
 
@@ -27,13 +27,13 @@ if (empty(\Ease\WebPage::getRequestValue('myurl'))) {
 $loginForm = new ConnectionForm(['action' => 'install.php']);
 
 $loginForm->addInput(
-        new Toggle(
-                'browser',
-                isset($_REQUEST) && array_key_exists('browser', $_REQUEST),
-                'automatic',
-                ['data-on' => _('AbraFlexi WebView'), 'data-off' => _('System Browser')]
-        ),
-        _('Open results in AbraFlexi WebView or in System default browser')
+    new Toggle(
+        'browser',
+        isset($_REQUEST) && array_key_exists('browser', $_REQUEST),
+        'automatic',
+        ['data-on' => _('AbraFlexi WebView'), 'data-off' => _('System Browser')]
+    ),
+    _('Open results in AbraFlexi WebView or in System default browser')
 );
 
 //$loginForm->addInput( new \Ease\Html\InputUrlTag('myurl'), _('My Url'), dirname(\Ease\Page::phpSelf()), sprintf( _('Same url as you can see in browser without %s'), basename( __FILE__ ) ) );
@@ -52,8 +52,8 @@ if ($oPage->isPosted()) {
     $browser = isset($_REQUEST) && array_key_exists('browser', $_REQUEST) ? 'automatic' : 'desktop';
 
     $buttoner = new \AbraFlexi\RW(
-            null,
-            array_merge($_REQUEST, ['evidence' => 'custom-button'])
+        null,
+        array_merge($_REQUEST, ['evidence' => 'custom-button'])
     );
 
     $buttoner->logBanner();
@@ -75,7 +75,7 @@ if ($oPage->isPosted()) {
 
 
 $setupRow = new Row();
-$setupRow->addColumn(2, new ui\AppLogo(['class'=>'img-fluid']));
+$setupRow->addColumn(2, new ui\AppLogo(['class' => 'img-fluid']));
 $setupRow->addColumn(6, $loginForm);
 
 $oPage->addItem(new Container(new \Ease\Html\H1Tag(_('AbraFlexi Invoice Enhancer'))));

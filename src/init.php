@@ -39,9 +39,9 @@ if (array_key_exists('connection', $_SESSION)) {
     } else {
         if (\Ease\WebPage::getRequestValue('kod')) {
             $oPage->addItem(new \Ease\TWB5\LinkButton(
-                            'JavaScript:self.close()',
-                            _('Session Expired'),
-                            'danger'
+                'JavaScript:self.close()',
+                _('Session Expired'),
+                'danger'
             ));
         } else {
             $oPage->redirect('install.php');
@@ -50,4 +50,3 @@ if (array_key_exists('connection', $_SESSION)) {
         }
     }
 }
-

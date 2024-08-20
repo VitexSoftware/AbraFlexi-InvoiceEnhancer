@@ -10,15 +10,16 @@ namespace AbraFlexi\Enhancer\ui;
 /**
  * Description of PageBottom
  *
- * @author Vitex <info@vitexsoftware.cz> 
+ * @author Vitex <info@vitexsoftware.cz>
  */
-class PageBottom extends \Ease\Html\FooterTag {
-
-    public function __construct($content = null, $properties = []) {
+class PageBottom extends \Ease\Html\FooterTag
+{
+    public function __construct($content = null, $properties = [])
+    {
         parent::__construct($content, $properties);
 
-        $this->addItem(new \Ease\TWB5\Container(\Ease\TWB5\WebPage::singleton()->getStatusMessagesBlock()),['style'=>'padding: 10px; margin: 10px;']);
-        
+        $this->addItem(new \Ease\TWB5\Container(\Ease\TWB5\WebPage::singleton()->getStatusMessagesBlock()), ['style' => 'padding: 10px; margin: 10px;']);
+
         $this->addItem(new \Ease\Html\HrTag());
 
         $footrow = new \Ease\TWB5\Row();
@@ -33,6 +34,4 @@ class PageBottom extends \Ease\Html\FooterTag {
 
         $this->addItem(new \Ease\TWB5\Container($footrow));
     }
-    
-    
 }
