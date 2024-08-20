@@ -33,9 +33,9 @@ class InvoiceForm extends \Ease\TWB5\Panel {
     public function items($invoice) {
         $itemsTable = new \Ease\TWB5\Table();
         $itemsTable->addRowHeaderColumns(['kod' => _('Code'), 'ean' => _('EAN'), 'name' => _('Name'), 'price' => _('Price'), 'x' => _('Convert')]);
-
-        if ($invoice->getSubItems()) {
-            foreach ($invoice->getSubItems() as $item) {
+        $subItems = $invoice->getSubItems();
+        if ($subItems) {
+            foreach ($subItems as $item) {
                 switch ($item['typPolozkyK']) {
                     case 'typPolozky.obecny':
                         $itemsTable->addRowColumns([
@@ -47,8 +47,9 @@ class InvoiceForm extends \Ease\TWB5\Panel {
                         ]);
                         break;
                     case 'typPolozky.katalog':
+                        $pricelistHelper = new \AbraFlexi\Cenik(\AbraFlexi\Functions::code($item['kod'], ['detail' => 'id']));
                         $itemsTable->addRowColumns([
-                            'kod' => $item['kod'],
+                            'kod' => new \Ease\Html\ATag($pricelistHelper->flexiEditUrl(), $item['kod'], ['target'=>'_blank']),
                             'ean' => empty($item['eanKod']) ? '' : $item['eanKod'],
                             'name' => $item['nazev'],
                             'price' => $item['cenaMj'] . ' ' . \AbraFlexi\Functions::uncode($item['mena']),

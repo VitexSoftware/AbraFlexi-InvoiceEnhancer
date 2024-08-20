@@ -2,6 +2,7 @@
 
 /**
  * AbraFlexi Custom Button Installer
+ * 
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
 

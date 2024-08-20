@@ -6,7 +6,7 @@
     "require": {
         "vitexsoftware/ease-twbootstrap5": "dev-main",
         "vitexsoftware/ease-bootstrap5-widgets-abraflexi": "dev-main",
-        "vitexsoftware/ease-bootstrap5-widgets": "dev-master"
+        "vitexsoftware/ease-bootstrap5-widgets": "dev-main"
     },
     "license": "MIT",
     "authors": [

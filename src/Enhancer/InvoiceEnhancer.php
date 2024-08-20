@@ -37,12 +37,12 @@ class InvoiceEnhancer extends FakturaPrijata {
             foreach ($requestData['convert'] as $itemId) {
                 if (array_key_exists($itemId, $invoiceItems)) {
                     $subitemData = $invoiceItems[$itemId];
-                    if (empty($subitemData['eanKod']) === false) {
+                    if (empty($subitemData['eanKod']) === false) { // Check for pricelist presence using EAN code
                         $this->pricelist->loadFromAbraFlexi(['eanKod' => $subitemData['eanKod']]);
-                    } else {
+                    } else { // If the EAN code is not availble, then check for pricelist presence using partnumber
                         $this->pricelist->loadFromAbraFlexi(['kod' => $subitemData['kod']]);
                     }
-                    if ($this->pricelist->getMyKey()) {
+                    if ($this->pricelist->getMyKey()) { // Is such record loaded ?
                         $this->addStatusMessage(_('Pricelist item found. Assigning ...'), 'success');
                     } else {
                         $this->addStatusMessage(_('Pricelist Item not found. Creating new one'));
@@ -71,6 +71,7 @@ class InvoiceEnhancer extends FakturaPrijata {
                         echo new PreTag($exc->getTraceAsString());
                     }
                 }
+                $this->pricelist->dataReset();
             }
             $this->reload();
         }
