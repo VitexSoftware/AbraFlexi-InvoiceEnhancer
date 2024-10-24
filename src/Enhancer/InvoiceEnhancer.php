@@ -19,18 +19,19 @@ use Ease\Shared;
  *
  * @author vitex
  */
-class InvoiceEnhancer extends FakturaPrijata {
-
+class InvoiceEnhancer extends FakturaPrijata
+{
     /**
-     * 
+     *
      * @var Cenik
      */
     public $pricelist = null;
     private $pricer;
 
-    public function convertSelected($requestData) {
+    public function convertSelected($requestData)
+    {
         $this->pricelist = new Cenik();
-        $this->pricer = new Dodavatel(['firma' => $this->getDataValue('firma'), 'poznam' => 'Import: ' . Shared::AppName() . ' ' . Shared::AppVersion() . "\nhttps://github.com/Spoje-NET/discomp2abraflexi"], ['evidence' => 'dodavatel', 'autoload' => false]);
+        $this->pricer = new Dodavatel(['firma' => Functions2::code($this->getDataValue('firma')), 'poznam' => 'Import: ' . Shared::AppName() . ' ' . Shared::AppVersion() . "\nhttps://github.com/VitexSoftware/AbraFlexi-InvoiceEnhancer/"], ['autoload' => false]);
 
         if (array_key_exists('convert', $requestData)) {
             $invoiceItems = Functions::reindexArrayBy($this->getSubItems(), 'id');
@@ -45,8 +46,14 @@ class InvoiceEnhancer extends FakturaPrijata {
                     if ($this->pricelist->getMyKey()) { // Is such record loaded ?
                         $this->addStatusMessage(_('Pricelist item found. Assigning ...'), 'success');
                     } else {
-                        $this->addStatusMessage(_('Pricelist Item not found. Creating new one'));
-                        $this->pricelist = $this->createPricelistItem($subitemData);
+                        $candidates = $this->pricer->getColumnsFromAbraFlexi('*', ['kodIndi' => $subitemData['kod'], 'firma' => Functions2::code($this->getDataValue('firma'))]);
+                        if (empty($candidates)) {
+                            $this->addStatusMessage(_('Pricelist Item not found. Creating new one'));
+                            $this->pricelist = $this->createPricelistItem($subitemData);
+                        } else {
+                            $itemCode = $candidates[0]['cenik'];
+                            $this->pricelist->loadFromAbraFlexi(Functions2::code($itemCode));
+                        }
                     }
 
                     $this->updateSupplierPrice($subitemData);
@@ -77,7 +84,8 @@ class InvoiceEnhancer extends FakturaPrijata {
         }
     }
 
-    public function createPricelistItem($subitemData) {
+    public function createPricelistItem($subitemData)
+    {
         $invoiceItem = new FakturaPrijataPolozka($subitemData);
         $cvrtr = new Convertor($invoiceItem, $this->pricelist);
         $pricelistItem = $cvrtr->conversion();
@@ -89,7 +97,8 @@ class InvoiceEnhancer extends FakturaPrijata {
     /**
      *
      */
-    public function updateSupplierPrice($activeItemData) {
+    public function updateSupplierPrice($activeItemData)
+    {
         $this->pricer->unsetDataValue('id');
         $this->pricer->setDataValue('cenik', $this->pricelist);
         $this->pricer->setDataValue('kodIndi', $activeItemData['kod']);

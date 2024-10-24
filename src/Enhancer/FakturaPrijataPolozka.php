@@ -7,7 +7,7 @@ namespace AbraFlexi\Enhancer;
  *
  * @author vitex
  */
-class FakturaPrijataPolozka extends \AbraFlexi\RW {
-
+class FakturaPrijataPolozka extends \AbraFlexi\RW
+{
     public $evidence = 'faktura-prijata-polozka';
 }

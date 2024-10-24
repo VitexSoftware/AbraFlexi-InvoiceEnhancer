@@ -12,9 +12,10 @@ namespace AbraFlexi\Enhancer\ui;
  *
  * @author vitex
  */
-class InvoiceForm extends \Ease\TWB5\Panel {
-
-    public function __construct(\AbraFlexi\FakturaPrijata $invoice) {
+class InvoiceForm extends \Ease\TWB5\Panel
+{
+    public function __construct(\AbraFlexi\FakturaPrijata $invoice)
+    {
 
         $form = new \Ease\TWB5\Form([], [], $this->items($invoice));
         $form->addItem(new \Ease\Html\InputHiddenTag('kod', \AbraFlexi\Functions::uncode($invoice->getRecordCode())));
@@ -25,12 +26,13 @@ class InvoiceForm extends \Ease\TWB5\Panel {
     }
 
     /**
-     * 
+     *
      * @param \AbraFlexi\FakturaPrijata $invoice
-     * 
+     *
      * @return \Ease\TWB5\Table
      */
-    public function items($invoice) {
+    public function items($invoice)
+    {
         $itemsTable = new \Ease\TWB5\Table();
         $itemsTable->addRowHeaderColumns(['kod' => _('Code'), 'ean' => _('EAN'), 'name' => _('Name'), 'price' => _('Price'), 'x' => _('Convert')]);
         $subItems = $invoice->getSubItems();
@@ -49,7 +51,7 @@ class InvoiceForm extends \Ease\TWB5\Panel {
                     case 'typPolozky.katalog':
                         $pricelistHelper = new \AbraFlexi\Cenik(\AbraFlexi\Functions::code($item['kod'], ['detail' => 'id']));
                         $itemsTable->addRowColumns([
-                            'kod' => new \Ease\Html\ATag($pricelistHelper->flexiEditUrl(), $item['kod'], ['target'=>'_blank']),
+                            'kod' => new \Ease\Html\ATag($pricelistHelper->flexiEditUrl(), $item['kod'], ['target' => '_blank']),
                             'ean' => empty($item['eanKod']) ? '' : $item['eanKod'],
                             'name' => $item['nazev'],
                             'price' => $item['cenaMj'] . ' ' . \AbraFlexi\Functions::uncode($item['mena']),
