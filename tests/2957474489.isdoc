@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Invoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="6.0.2" xmlns="http://isdoc.cz/namespace/2013">
+  <DocumentType>1</DocumentType>
+  <ID>2957474489</ID>
+  <UUID>6d1133b5-1def-4487-83f3-a90ae0dbf6ef</UUID>
+  <IssuingSystem>TaxDocuments - Alza Phoenix</IssuingSystem>
+  <IssueDate>2024-07-13</IssueDate>
+  <TaxPointDate>2024-07-13</TaxPointDate>
+  <VATApplicable>true</VATApplicable>
+  <ElectronicPossibilityAgreementReference />
+  <Note languageID="cs">Doporučujeme zboží překontrolovat ihned po převzetí, pozdější připomínky ke stavu předávaného zboží mohou být zamítnuty. Kupující nabude vlastnického práva ke zboží až po úplném zaplacení kupní ceny. V ceně zboží je zahrnut recyklační poplatek a autorské odměny v zákonné výši. Více informací o podmínkách záruky naleznete ve Všeobecných obchodních podmínkách a Reklamačním řádu na www.alza.cz.</Note>
+  <LocalCurrencyCode>CZK</LocalCurrencyCode>
+  <CurrRate>1.0000</CurrRate>
+  <RefCurrRate>1.0000</RefCurrRate>
+  <AccountingSupplierParty>
+    <Party>
+      <PartyIdentification>
+        <ID>27082440</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>Alza.cz a.s.</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>Jankovcova</StreetName>
+        <BuildingNumber>1522</BuildingNumber>
+        <CityName>Praha 7</CityName>
+        <PostalZone>17000</PostalZone>
+        <Country>
+          <IdentificationCode>CZ</IdentificationCode>
+          <Name>Česká republika</Name>
+        </Country>
+      </PostalAddress>
+      <PartyTaxScheme>
+        <CompanyID>CZ27082440</CompanyID>
+        <TaxScheme>VAT</TaxScheme>
+      </PartyTaxScheme>
+      <RegisterIdentification>
+        <Preformatted>Zapsána v OR u MS v Praze, oddíl B, vložka 8573.</Preformatted>
+      </RegisterIdentification>
+      <Contact>
+        <Telephone>+420225340111</Telephone>
+        <ElectronicMail>obchod@alza.cz</ElectronicMail>
+      </Contact>
+    </Party>
+  </AccountingSupplierParty>
+  <AccountingCustomerParty>
+    <Party>
+      <PartyIdentification>
+        <UserID>SPOJE.NET s.r.o.</UserID>
+        <ID>29034736</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>SPOJE.NET s.r.o.</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>Závěrka</StreetName>
+        <BuildingNumber>473</BuildingNumber>
+        <CityName>Praha 6</CityName>
+        <PostalZone>16900</PostalZone>
+        <Country>
+          <IdentificationCode>CZ</IdentificationCode>
+          <Name>Česká republika</Name>
+        </Country>
+      </PostalAddress>
+      <PartyTaxScheme>
+        <CompanyID>CZ29034736</CompanyID>
+        <TaxScheme>VAT</TaxScheme>
+      </PartyTaxScheme>
+      <Contact>
+        <Telephone>+420603114488</Telephone>
+        <ElectronicMail>tomasek@spoje.net</ElectronicMail>
+      </Contact>
+    </Party>
+  </AccountingCustomerParty>
+  <Delivery>
+    <Party>
+      <PartyIdentification>
+        <UserID>SPOJE.NET s.r.o.</UserID>
+        <ID>29034736</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>SPOJE.NET s.r.o.</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>Závěrka</StreetName>
+        <BuildingNumber>473</BuildingNumber>
+        <CityName>Praha 6</CityName>
+        <PostalZone>16900</PostalZone>
+        <Country>
+          <IdentificationCode>CZ</IdentificationCode>
+          <Name>Česká republika</Name>
+        </Country>
+      </PostalAddress>
+      <PartyTaxScheme>
+        <CompanyID>CZ29034736</CompanyID>
+        <TaxScheme>VAT</TaxScheme>
+      </PartyTaxScheme>
+      <Contact>
+        <Telephone>+420603114488</Telephone>
+        <ElectronicMail>tomasek@spoje.net</ElectronicMail>
+      </Contact>
+    </Party>
+  </Delivery>
+  <InvoiceLines>
+    <InvoiceLine>
+      <ID>2211530247</ID>
+      <InvoicedQuantity unitCode="ks">1.0000</InvoicedQuantity>
+      <LineExtensionAmount>4537.1900</LineExtensionAmount>
+      <LineExtensionAmountTaxInclusive>5490.0000</LineExtensionAmountTaxInclusive>
+      <LineExtensionTaxAmount>952.8100</LineExtensionTaxAmount>
+      <UnitPrice>4537.1900</UnitPrice>
+      <UnitPriceTaxInclusive>0.0000</UnitPriceTaxInclusive>
+      <ClassifiedTaxCategory>
+        <Percent>21.0000</Percent>
+        <VATCalculationMethod>0</VATCalculationMethod>
+      </ClassifiedTaxCategory>
+      <Note languageID="cs">Doporučujeme zboží překontrolovat ihned po převzetí, pozdější připomínky ke stavu předávaného zboží mohou být zamítnuty. Kupující nabude vlastnického práva ke zboží až po úplném zaplacení kupní ceny. V ceně zboží je zahrnut recyklační poplatek a autorské odměny v zákonné výši. Více informací o podmínkách záruky naleznete ve Všeobecných obchodních podmínkách a Reklamačním řádu na www.alza.cz.</Note>
+      <Item>
+        <Description>LCD monitor 28" Samsung U28R550</Description>
+        <CatalogueItemIdentification>
+          <ID>8806094771831</ID>
+        </CatalogueItemIdentification>
+        <SellersItemIdentification>
+          <ID>WH605e21a</ID>
+        </SellersItemIdentification>
+      </Item>
+    </InvoiceLine>
+  </InvoiceLines>
+  <TaxTotal>
+    <TaxSubTotal>
+      <TaxableAmount>4537.1900</TaxableAmount>
+      <TaxAmount>952.8100</TaxAmount>
+      <TaxInclusiveAmount>5490.0000</TaxInclusiveAmount>
+      <AlreadyClaimedTaxableAmount>0</AlreadyClaimedTaxableAmount>
+      <AlreadyClaimedTaxAmount>0</AlreadyClaimedTaxAmount>
+      <AlreadyClaimedTaxInclusiveAmount>0</AlreadyClaimedTaxInclusiveAmount>
+      <DifferenceTaxableAmount>0</DifferenceTaxableAmount>
+      <DifferenceTaxAmount>0</DifferenceTaxAmount>
+      <DifferenceTaxInclusiveAmount>0</DifferenceTaxInclusiveAmount>
+      <TaxCategory>
+        <Percent>21.0000</Percent>
+        <LocalReverseChargeFlag>false</LocalReverseChargeFlag>
+      </TaxCategory>
+    </TaxSubTotal>
+    <TaxAmount>952.8100</TaxAmount>
+  </TaxTotal>
+  <LegalMonetaryTotal>
+    <TaxExclusiveAmount>4537.1900</TaxExclusiveAmount>
+    <TaxInclusiveAmount>5490.0000</TaxInclusiveAmount>
+    <AlreadyClaimedTaxExclusiveAmount>0</AlreadyClaimedTaxExclusiveAmount>
+    <AlreadyClaimedTaxInclusiveAmount>0</AlreadyClaimedTaxInclusiveAmount>
+    <DifferenceTaxExclusiveAmount>4537.1900</DifferenceTaxExclusiveAmount>
+    <DifferenceTaxInclusiveAmount>5490.0000</DifferenceTaxInclusiveAmount>
+    <PayableRoundingAmount>0.0000</PayableRoundingAmount>
+    <PaidDepositsAmount>0.0000</PaidDepositsAmount>
+    <PayableAmount>0.0000</PayableAmount>
+  </LegalMonetaryTotal>
+  <PaymentMeans>
+    <Payment>
+      <PaidAmount>0.0000</PaidAmount>
+      <PaymentMeansCode>42</PaymentMeansCode>
+      <Details>
+        <PaymentDueDate>2024-07-27</PaymentDueDate>
+        <ID>2171532</ID>
+        <BankCode>0800</BankCode>
+        <Name>Česká spořitelna, a.s.</Name>
+        <IBAN />
+        <BIC />
+        <VariableSymbol>5126424391</VariableSymbol>
+        <ConstantSymbol>0308</ConstantSymbol>
+        <SpecificSymbol />
+      </Details>
+    </Payment>
+  </PaymentMeans>
+</Invoice>

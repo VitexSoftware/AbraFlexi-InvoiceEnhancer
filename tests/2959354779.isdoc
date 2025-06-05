@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Invoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="6.0.2" xmlns="http://isdoc.cz/namespace/2013">
+  <DocumentType>1</DocumentType>
+  <ID>2959354779</ID>
+  <UUID>f0a150dc-c4f3-4e73-8703-883c8b9f8636</UUID>
+  <IssuingSystem>TaxDocuments - Alza Phoenix</IssuingSystem>
+  <IssueDate>2024-08-12</IssueDate>
+  <TaxPointDate>2024-08-12</TaxPointDate>
+  <VATApplicable>true</VATApplicable>
+  <ElectronicPossibilityAgreementReference />
+  <Note languageID="cs">Doporučujeme zboží překontrolovat ihned po převzetí, pozdější připomínky ke stavu předávaného zboží mohou být zamítnuty. Kupující nabude vlastnického práva ke zboží až po úplném zaplacení kupní ceny. V ceně zboží je zahrnut recyklační poplatek a autorské odměny v zákonné výši. Více informací o podmínkách záruky naleznete ve Všeobecných obchodních podmínkách a Reklamačním řádu na www.alza.cz.</Note>
+  <LocalCurrencyCode>CZK</LocalCurrencyCode>
+  <CurrRate>1.0000</CurrRate>
+  <RefCurrRate>1.0000</RefCurrRate>
+  <AccountingSupplierParty>
+    <Party>
+      <PartyIdentification>
+        <ID>27082440</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>Alza.cz a.s.</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>Jankovcova</StreetName>
+        <BuildingNumber>1522</BuildingNumber>
+        <CityName>Praha 7</CityName>
+        <PostalZone>17000</PostalZone>
+        <Country>
+          <IdentificationCode>CZ</IdentificationCode>
+          <Name>Česká republika</Name>
+        </Country>
+      </PostalAddress>
+      <PartyTaxScheme>
+        <CompanyID>CZ27082440</CompanyID>
+        <TaxScheme>VAT</TaxScheme>
+      </PartyTaxScheme>
+      <RegisterIdentification>
+        <Preformatted>Zapsána v OR u MS v Praze, oddíl B, vložka 8573.</Preformatted>
+      </RegisterIdentification>
+      <Contact>
+        <Telephone>+420225340111</Telephone>
+        <ElectronicMail>obchod@alza.cz</ElectronicMail>
+      </Contact>
+    </Party>
+  </AccountingSupplierParty>
+  <AccountingCustomerParty>
+    <Party>
+      <PartyIdentification>
+        <UserID>SPOJE.NET s.r.o.</UserID>
+        <ID>29034736</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>SPOJE.NET s.r.o.</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>Závěrka</StreetName>
+        <BuildingNumber>473</BuildingNumber>
+        <CityName>Praha 6</CityName>
+        <PostalZone>16900</PostalZone>
+        <Country>
+          <IdentificationCode>CZ</IdentificationCode>
+          <Name>Česká republika</Name>
+        </Country>
+      </PostalAddress>
+      <PartyTaxScheme>
+        <CompanyID>CZ29034736</CompanyID>
+        <TaxScheme>VAT</TaxScheme>
+      </PartyTaxScheme>
+      <Contact>
+        <Telephone>+420603114488</Telephone>
+        <ElectronicMail>tomasek@spoje.net</ElectronicMail>
+      </Contact>
+    </Party>
+  </AccountingCustomerParty>
+  <Delivery>
+    <Party>
+      <PartyIdentification>
+        <UserID>SPOJE.NET s.r.o.</UserID>
+        <ID>29034736</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>SPOJE.NET s.r.o.</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName>Beranových</StreetName>
+        <BuildingNumber>130</BuildingNumber>
+        <CityName>Praha 18</CityName>
+        <PostalZone>19900</PostalZone>
+        <Country>
+          <IdentificationCode>CZ</IdentificationCode>
+          <Name>Česká republika</Name>
+        </Country>
+      </PostalAddress>
+      <PartyTaxScheme>
+        <CompanyID>CZ29034736</CompanyID>
+        <TaxScheme>VAT</TaxScheme>
+      </PartyTaxScheme>
+      <Contact>
+        <Telephone>+420603114488</Telephone>
+        <ElectronicMail>tomasek@spoje.net</ElectronicMail>
+      </Contact>
+    </Party>
+  </Delivery>
+  <InvoiceLines>
+    <InvoiceLine>
+      <ID>2248066007</ID>
+      <InvoicedQuantity unitCode="ks">1.0000</InvoicedQuantity>
+      <LineExtensionAmount>230.5800</LineExtensionAmount>
+      <LineExtensionAmountTaxInclusive>279.0000</LineExtensionAmountTaxInclusive>
+      <LineExtensionTaxAmount>48.4200</LineExtensionTaxAmount>
+      <UnitPrice>230.5800</UnitPrice>
+      <UnitPriceTaxInclusive>0.0000</UnitPriceTaxInclusive>
+      <ClassifiedTaxCategory>
+        <Percent>21.0000</Percent>
+        <VATCalculationMethod>0</VATCalculationMethod>
+      </ClassifiedTaxCategory>
+      <Note languageID="cs">Doporučujeme zboží překontrolovat ihned po převzetí, pozdější připomínky ke stavu předávaného zboží mohou být zamítnuty. Kupující nabude vlastnického práva ke zboží až po úplném zaplacení kupní ceny. V ceně zboží je zahrnut recyklační poplatek a autorské odměny v zákonné výši. Více informací o podmínkách záruky naleznete ve Všeobecných obchodních podmínkách a Reklamačním řádu na www.alza.cz.</Note>
+      <Item>
+        <Description>Paměťová karta Kingston MicroSDXC 64GB Canvas Select Plus + SD adaptér</Description>
+        <CatalogueItemIdentification>
+          <ID>DU007s8j93c</ID>
+        </CatalogueItemIdentification>
+        <SellersItemIdentification>
+          <ID>DU007s8j93c</ID>
+        </SellersItemIdentification>
+      </Item>
+    </InvoiceLine>
+    <InvoiceLine>
+      <ID>2248066008</ID>
+      <InvoicedQuantity unitCode="ks">1.0000</InvoicedQuantity>
+      <LineExtensionAmount>437.1900</LineExtensionAmount>
+      <LineExtensionAmountTaxInclusive>529.0000</LineExtensionAmountTaxInclusive>
+      <LineExtensionTaxAmount>91.8100</LineExtensionTaxAmount>
+      <UnitPrice>437.1900</UnitPrice>
+      <UnitPriceTaxInclusive>0.0000</UnitPriceTaxInclusive>
+      <ClassifiedTaxCategory>
+        <Percent>21.0000</Percent>
+        <VATCalculationMethod>0</VATCalculationMethod>
+      </ClassifiedTaxCategory>
+      <Note languageID="cs">Doporučujeme zboží překontrolovat ihned po převzetí, pozdější připomínky ke stavu předávaného zboží mohou být zamítnuty. Kupující nabude vlastnického práva ke zboží až po úplném zaplacení kupní ceny. V ceně zboží je zahrnut recyklační poplatek a autorské odměny v zákonné výši. Více informací o podmínkách záruky naleznete ve Všeobecných obchodních podmínkách a Reklamačním řádu na www.alza.cz.</Note>
+      <Item>
+        <Description>Paměťová karta SanDisk MicroSDXC Ultra 256GB + SD adaptér</Description>
+        <CatalogueItemIdentification>
+          <ID>619659200565</ID>
+        </CatalogueItemIdentification>
+        <SellersItemIdentification>
+          <ID>DT807j2f2ba5</ID>
+        </SellersItemIdentification>
+      </Item>
+    </InvoiceLine>
+    <InvoiceLine>
+      <ID>2248066009</ID>
+      <InvoicedQuantity unitCode="ks">1.0000</InvoicedQuantity>
+      <LineExtensionAmount>57.0200</LineExtensionAmount>
+      <LineExtensionAmountTaxInclusive>69.0000</LineExtensionAmountTaxInclusive>
+      <LineExtensionTaxAmount>11.9800</LineExtensionTaxAmount>
+      <UnitPrice>57.0200</UnitPrice>
+      <UnitPriceTaxInclusive>0.0000</UnitPriceTaxInclusive>
+      <ClassifiedTaxCategory>
+        <Percent>21.0000</Percent>
+        <VATCalculationMethod>0</VATCalculationMethod>
+      </ClassifiedTaxCategory>
+      <Note languageID="cs">Doporučujeme zboží překontrolovat ihned po převzetí, pozdější připomínky ke stavu předávaného zboží mohou být zamítnuty. Kupující nabude vlastnického práva ke zboží až po úplném zaplacení kupní ceny. V ceně zboží je zahrnut recyklační poplatek a autorské odměny v zákonné výši. Více informací o podmínkách záruky naleznete ve Všeobecných obchodních podmínkách a Reklamačním řádu na www.alza.cz.</Note>
+      <Item>
+        <Description>Doprava - AlzaBox</Description>
+        <CatalogueItemIdentification>
+          <ID />
+        </CatalogueItemIdentification>
+        <SellersItemIdentification>
+          <ID>SL190r</ID>
+        </SellersItemIdentification>
+      </Item>
+    </InvoiceLine>
+    <InvoiceLine>
+      <ID>2248066010</ID>
+      <InvoicedQuantity unitCode="">1.0000</InvoicedQuantity>
+      <LineExtensionAmount>-57.0200</LineExtensionAmount>
+      <LineExtensionAmountTaxInclusive>-69.0000</LineExtensionAmountTaxInclusive>
+      <LineExtensionTaxAmount>-11.9800</LineExtensionTaxAmount>
+      <UnitPrice>-57.0200</UnitPrice>
+      <UnitPriceTaxInclusive>0.0000</UnitPriceTaxInclusive>
+      <ClassifiedTaxCategory>
+        <Percent>21.0000</Percent>
+        <VATCalculationMethod>0</VATCalculationMethod>
+      </ClassifiedTaxCategory>
+      <Note languageID="cs">Doporučujeme zboží překontrolovat ihned po převzetí, pozdější připomínky ke stavu předávaného zboží mohou být zamítnuty. Kupující nabude vlastnického práva ke zboží až po úplném zaplacení kupní ceny. V ceně zboží je zahrnut recyklační poplatek a autorské odměny v zákonné výši. Více informací o podmínkách záruky naleznete ve Všeobecných obchodních podmínkách a Reklamačním řádu na www.alza.cz.</Note>
+      <Item>
+        <Description>Sleva na dopravné - AlzaPlus+</Description>
+        <CatalogueItemIdentification>
+          <ID />
+        </CatalogueItemIdentification>
+        <SellersItemIdentification>
+          <ID>SL083d66</ID>
+        </SellersItemIdentification>
+      </Item>
+    </InvoiceLine>
+  </InvoiceLines>
+  <TaxTotal>
+    <TaxSubTotal>
+      <TaxableAmount>667.7700</TaxableAmount>
+      <TaxAmount>140.2300</TaxAmount>
+      <TaxInclusiveAmount>808.0000</TaxInclusiveAmount>
+      <AlreadyClaimedTaxableAmount>0</AlreadyClaimedTaxableAmount>
+      <AlreadyClaimedTaxAmount>0</AlreadyClaimedTaxAmount>
+      <AlreadyClaimedTaxInclusiveAmount>0</AlreadyClaimedTaxInclusiveAmount>
+      <DifferenceTaxableAmount>0</DifferenceTaxableAmount>
+      <DifferenceTaxAmount>0</DifferenceTaxAmount>
+      <DifferenceTaxInclusiveAmount>0</DifferenceTaxInclusiveAmount>
+      <TaxCategory>
+        <Percent>21.0000</Percent>
+        <LocalReverseChargeFlag>false</LocalReverseChargeFlag>
+      </TaxCategory>
+    </TaxSubTotal>
+    <TaxAmount>140.2300</TaxAmount>
+  </TaxTotal>
+  <LegalMonetaryTotal>
+    <TaxExclusiveAmount>667.7700</TaxExclusiveAmount>
+    <TaxInclusiveAmount>808.0000</TaxInclusiveAmount>
+    <AlreadyClaimedTaxExclusiveAmount>0</AlreadyClaimedTaxExclusiveAmount>
+    <AlreadyClaimedTaxInclusiveAmount>0</AlreadyClaimedTaxInclusiveAmount>
+    <DifferenceTaxExclusiveAmount>667.7700</DifferenceTaxExclusiveAmount>
+    <DifferenceTaxInclusiveAmount>808.0000</DifferenceTaxInclusiveAmount>
+    <PayableRoundingAmount>0.0000</PayableRoundingAmount>
+    <PaidDepositsAmount>0.0000</PaidDepositsAmount>
+    <PayableAmount>0.0000</PayableAmount>
+  </LegalMonetaryTotal>
+  <PaymentMeans>
+    <Payment>
+      <PaidAmount>0.0000</PaidAmount>
+      <PaymentMeansCode>42</PaymentMeansCode>
+      <Details>
+        <PaymentDueDate>2024-08-26</PaymentDueDate>
+        <ID>2171532</ID>
+        <BankCode>0800</BankCode>
+        <Name>Česká spořitelna, a.s.</Name>
+        <IBAN />
+        <BIC />
+        <VariableSymbol>5152342371</VariableSymbol>
+        <ConstantSymbol>0308</ConstantSymbol>
+        <SpecificSymbol />
+      </Details>
+    </Payment>
+  </PaymentMeans>
+</Invoice>

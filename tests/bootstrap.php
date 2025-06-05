@@ -13,14 +13,6 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace AbraFlexi\Enhancer;
+require_once __DIR__.'/../vendor/autoload.php';
 
-/**
- * Description of FakturaPrijataPolozka.
- *
- * @author vitex
- */
-class FakturaPrijataPolozka extends \AbraFlexi\RW
-{
-    public $evidence = 'faktura-prijata-polozka';
-}
+\Ease\Shared::instanced()->loadConfig(__DIR__.'/.env', true);

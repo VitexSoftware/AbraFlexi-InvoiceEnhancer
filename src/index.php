@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * Invoice Enhancer
+ * This file is part of the MultiFlexi package
  *
- * @author Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright (c) 2024, VitexSoftware
+ * https://github.com/VitexSoftware/AbraFlexi-InvoiceEnhancer
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace AbraFlexi\Enhancer;
@@ -25,12 +31,14 @@ if (empty($kod)) {
     try {
         $invoicer = new InvoiceEnhancer(RO::code($kod));
         $oPage->setPageTitle($invoicer->getRecordIdent());
+
         if ($oPage->isPosted()) {
             $invoicer->convertSelected($_REQUEST);
         }
+
         $oPage->body->addItem(new InvoiceForm($invoicer));
     } catch (\AbraFlexi\Exception $exc) {
-        if ($exc->getCode() == 401) {
+        if ($exc->getCode() === 401) {
             $oPage->body->addItem(new \Ease\Html\H2Tag(_('Session Expired')));
         } else {
             $oPage->addItem(new \Ease\Html\H1Tag($exc->getMessage()));

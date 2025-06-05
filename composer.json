@@ -2,12 +2,6 @@
     "name": "vitexsoftware/abraflexi-invoice-enhancer",
     "description": "Invoice Enhancer for AbraFlexi",
     "type": "project",
-    "version": "0.1",
-    "require": {
-        "vitexsoftware/ease-twbootstrap5": "dev-main",
-        "vitexsoftware/ease-bootstrap5-widgets-abraflexi": "dev-main",
-        "vitexsoftware/ease-bootstrap5-widgets": "dev-main"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -16,9 +10,26 @@
         }
     ],
     "minimum-stability": "dev",
+    "require": {
+        "vitexsoftware/ease-bootstrap5-widgets-abraflexi": "*",
+        "vitexsoftware/ease-bootstrap5-widgets": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpstan/phpstan": "*",
+        "friendsofphp/php-cs-fixer": "^3.71",
+        "ergebnis/composer-normalize": "^2.45",
+        "ergebnis/php-cs-fixer-config": "^6.45",
+        "phpstan/phpstan-phpunit": "2.0.x-dev"
+    },
     "autoload": {
         "psr-4": {
             "AbraFlexi\\Enhancer\\": "src/Enhancer/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
         }
     }
 }
