@@ -34,13 +34,13 @@ use Ease\Shared;
  */
 class InvoiceEnhancer extends FakturaPrijata
 {
-    public Cenik $pricelist = null;
+    public Cenik $pricelist;
     private $pricer;
 
     public function convertSelected($requestData): void
     {
         $this->pricelist = new Cenik();
-        $this->pricer = new Dodavatel(['firma' => Functions2::code($this->getDataValue('firma')), 'poznam' => 'Import: '.Shared::AppName().' '.Shared::AppVersion()."\nhttps://github.com/VitexSoftware/AbraFlexi-InvoiceEnhancer/"], ['autoload' => false]);
+        $this->pricer = new Dodavatel(['firma' => Functions2::code((string)$this->getDataValue('firma')), 'poznam' => 'Import: '.Shared::AppName().' '.Shared::AppVersion()."\nhttps://github.com/VitexSoftware/AbraFlexi-InvoiceEnhancer/"], ['autoload' => false]);
 
         if (\array_key_exists('convert', $requestData)) {
             $invoiceItems = Functions::reindexArrayBy($this->getSubItems(), 'id');
@@ -58,7 +58,7 @@ class InvoiceEnhancer extends FakturaPrijata
                     if ($this->pricelist->getMyKey()) { // Is such record loaded ?
                         $this->addStatusMessage(_('Pricelist item found. Assigning ...'), 'success');
                     } else {
-                        $candidates = $this->pricer->getColumnsFromAbraFlexi('*', ['kodIndi' => $subitemData['kod'], 'firma' => Functions2::code($this->getDataValue('firma'))]);
+                        $candidates = $this->pricer->getColumnsFromAbraFlexi('*', ['kodIndi' => $subitemData['kod'], 'firma' => Functions2::code((string)$this->getDataValue('firma'))]);
 
                         if (empty($candidates)) {
                             $this->addStatusMessage(_('Pricelist Item not found. Creating new one'));

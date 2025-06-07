@@ -22,5 +22,5 @@ namespace AbraFlexi\Enhancer;
  */
 class FakturaPrijataPolozka extends \AbraFlexi\RW
 {
-    public $evidence = 'faktura-prijata-polozka';
+    public ?string $evidence = 'faktura-prijata-polozka';
 }
