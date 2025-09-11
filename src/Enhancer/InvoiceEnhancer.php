@@ -56,7 +56,7 @@ class InvoiceEnhancer extends FakturaPrijata
                     if ($this->pricelist->getMyKey()) { // Is such record loaded ?
                         $this->addStatusMessage(_('Pricelist item found. Assigning ...'), 'success');
                     } else {
-                        $candidates = $this->pricer->getColumnsFromAbraFlexi('*', ['kodIndi' => $subitemData['kod'], 'firma' => Functions2::code((string) $this->getDataValue('firma'))]);
+                        $candidates = $this->pricer->getColumnsFromAbraFlexi('*', ['kodIndi' => $subitemData['kod'], 'firma' => \AbraFlexi\Code::ensure((string) $this->getDataValue('firma'))]);
 
                         if (empty($candidates)) {
                             $this->addStatusMessage(_('Pricelist Item not found. Creating new one'));

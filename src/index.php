@@ -28,7 +28,7 @@ if (empty($kod)) {
     $oPage->addItem(new ATag('install.php', _('Please setup your AbraFlexi connection')));
 } else {
     try {
-        $invoicer = new InvoiceEnhancer(\AbraFlexi\Functions::code($kod));
+        $invoicer = new InvoiceEnhancer(\AbraFlexi\Code::ensure($kod));
         $oPage->setPageTitle($invoicer->getRecordIdent());
 
         if ($oPage->isPosted()) {
