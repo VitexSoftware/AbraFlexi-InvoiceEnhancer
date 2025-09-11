@@ -105,7 +105,7 @@ class InvoiceEnhancer extends FakturaPrijata
         $pricelistItem = $cvrtr->conversion();
         $pricelistItem->setDataValue('dodavatel', $this->getDataValue('firma'));
         $pricelistItem->setDataValue('kod', $subitemData['kod']);
-
+        $pricelistItem->setDataValue('typCenyDphK', 'typCeny.bezDph');
         return $pricelistItem->sync() ? $pricelistItem : null;
     }
 
