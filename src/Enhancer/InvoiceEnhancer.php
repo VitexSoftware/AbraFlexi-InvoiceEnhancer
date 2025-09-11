@@ -20,8 +20,6 @@ use AbraFlexi\Cenik;
 use AbraFlexi\Dodavatel;
 use AbraFlexi\Exception;
 use AbraFlexi\FakturaPrijata;
-use AbraFlexi\Functions as Functions2;
-use AbraFlexi\RO;
 use Ease\Functions;
 use Ease\Html\H1Tag;
 use Ease\Html\PreTag;
@@ -40,7 +38,7 @@ class InvoiceEnhancer extends FakturaPrijata
     public function convertSelected($requestData): void
     {
         $this->pricelist = new Cenik();
-        $this->pricer = new Dodavatel(['firma' => Functions2::code((string)$this->getDataValue('firma')), 'poznam' => 'Import: '.Shared::AppName().' '.Shared::AppVersion()."\nhttps://github.com/VitexSoftware/AbraFlexi-InvoiceEnhancer/"], ['autoload' => false]);
+        $this->pricer = new Dodavatel(['firma' => \AbraFlexi\Code::ensure((string) $this->getDataValue('firma')), 'poznam' => 'Import: '.Shared::AppName().' '.Shared::AppVersion()."\nhttps://github.com/VitexSoftware/AbraFlexi-InvoiceEnhancer/"], ['autoload' => false]);
 
         if (\array_key_exists('convert', $requestData)) {
             $invoiceItems = Functions::reindexArrayBy($this->getSubItems(), 'id');
@@ -58,21 +56,21 @@ class InvoiceEnhancer extends FakturaPrijata
                     if ($this->pricelist->getMyKey()) { // Is such record loaded ?
                         $this->addStatusMessage(_('Pricelist item found. Assigning ...'), 'success');
                     } else {
-                        $candidates = $this->pricer->getColumnsFromAbraFlexi('*', ['kodIndi' => $subitemData['kod'], 'firma' => Functions2::code((string)$this->getDataValue('firma'))]);
+                        $candidates = $this->pricer->getColumnsFromAbraFlexi('*', ['kodIndi' => $subitemData['kod'], 'firma' => Functions2::code((string) $this->getDataValue('firma'))]);
 
                         if (empty($candidates)) {
                             $this->addStatusMessage(_('Pricelist Item not found. Creating new one'));
                             $this->pricelist = $this->createPricelistItem($subitemData);
                         } else {
                             $itemCode = $candidates[0]['cenik'];
-                            $this->pricelist->loadFromAbraFlexi(Functions2::code($itemCode));
+                            $this->pricelist->loadFromAbraFlexi(\AbraFlexi\Code::ensure($itemCode));
                         }
                     }
 
                     $this->updateSupplierPrice($subitemData);
 
                     $saver = new FakturaPrijata();
-                    $saver->setDataValue('id', Functions2::code($this->getRecordCode()));
+                    $saver->setDataValue('id', \AbraFlexi\Code::ensure($this->getRecordCode()));
 
                     $saver->addArrayToBranch([
                         'id' => $subitemData['id'],
@@ -127,12 +125,12 @@ class InvoiceEnhancer extends FakturaPrijata
         }
 
         $this->pricer->setDataValue('nakupCena', $activeItemData['cenaMj']); // TODO: Confirm column
-        $this->pricer->setDataValue('mena', RO::code($activeItemData['mena']));
-        $this->pricer->setDataValue('cenik', RO::code($activeItemData['kod']));
+        $this->pricer->setDataValue('mena', \AbraFlexi\Code::ensure($activeItemData['mena']));
+        $this->pricer->setDataValue('cenik', \AbraFlexi\Code::ensure($activeItemData['kod']));
 
         try {
             $this->pricer->insertToAbraFlexi();
-            $this->pricer->addStatusMessage(_('supplier price update').': '.RO::uncode($this->pricelist->getRecordCode()).': '.$this->pricer->getDataValue('nakupCena').' '.RO::uncode($this->pricer->getDataValue('mena')), $this->pricer->lastResponseCode === 201 ? 'success' : 'error');
+            $this->pricer->addStatusMessage(_('supplier price update').': '.\AbraFlexi\Code::strip($this->pricelist->getRecordCode()).': '.$this->pricer->getDataValue('nakupCena').' '.\AbraFlexi\Code::strip($this->pricer->getDataValue('mena')), $this->pricer->lastResponseCode === 201 ? 'success' : 'error');
         } catch (Exception $exc) {
             echo new H1Tag($exc->getMessage());
             echo new PreTag($exc->getTraceAsString());

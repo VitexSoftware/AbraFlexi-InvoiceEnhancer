@@ -1,8 +1,15 @@
-abraflexi-enhancer (0.2.0) UNRELEASED; urgency=medium
+abraflexi-enhancer (0.2.1) UNRELEASED; urgency=medium
 
+  * Update for php-abraflexi 3.6+
+
+ -- Vitex <vitezslav.dvorak@spojenet.cz>  Thu, 11 Sep 2025 14:47:01 +0200
+
+abraflexi-enhancer (0.2.0) unstable; urgency=medium
+
+  [ vitex ]
   * modernized code
 
- -- vitex <info@vitexsoftware.cz>  Thu, 05 Jun 2025 11:51:51 +0200
+ -- Vitex <vitezslav.dvorak@spojenet.cz>  Thu, 11 Sep 2025 14:46:38 +0200
 
 abraflexi-enhancer (0.1.1) unstable; urgency=medium
 
