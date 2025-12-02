@@ -20,6 +20,7 @@ use AbraFlexi\Cenik;
 use AbraFlexi\Dodavatel;
 use AbraFlexi\Exception;
 use AbraFlexi\FakturaPrijata;
+use AbraFlexi\FakturaPrijataPolozka;
 use Ease\Functions;
 use Ease\Html\H1Tag;
 use Ease\Html\PreTag;
@@ -63,7 +64,7 @@ class InvoiceEnhancer extends FakturaPrijata
                             $this->pricelist = $this->createPricelistItem($subitemData);
                         } else {
                             $itemCode = $candidates[0]['cenik'];
-                            $this->pricelist->loadFromAbraFlexi(\AbraFlexi\Code::ensure($itemCode));
+                            $this->pricelist->loadFromAbraFlexi(\AbraFlexi\Code::ensure((string) $itemCode));
                         }
                     }
 
@@ -105,7 +106,7 @@ class InvoiceEnhancer extends FakturaPrijata
         $pricelistItem = $cvrtr->conversion();
         $pricelistItem->setDataValue('dodavatel', $this->getDataValue('firma'));
         $pricelistItem->setDataValue('kod', $subitemData['kod']);
-        $pricelistItem->setDataValue('typCenyDphK', 'typCeny.bezDph');
+
         return $pricelistItem->sync() ? $pricelistItem : null;
     }
 
@@ -120,8 +121,8 @@ class InvoiceEnhancer extends FakturaPrijata
         $priceFound = $this->pricer->loadFromAbraFlexi(['cenik' => $this->pricelist, 'firma' => $this->getDataValue('firma')]);
 
         if (empty($priceFound)) {
-            $this->pricer->setDataValue('cenik', $this->pricelist);
-            $this->pricer->setDataValue('firma', $this->getDataValue('firma'));
+            $this->pricer->setDataValue('cenik', (string) $this->pricelist);
+            $this->pricer->setDataValue('firma', (string) $this->getDataValue('firma'));
         }
 
         $this->pricer->setDataValue('nakupCena', $activeItemData['cenaMj']); // TODO: Confirm column

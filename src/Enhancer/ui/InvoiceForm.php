@@ -28,7 +28,7 @@ class InvoiceForm extends \Ease\TWB5\Panel
         $form->addItem(new \Ease\Html\InputHiddenTag('kod', \AbraFlexi\Functions::uncode($invoice->getRecordCode())));
         $form->addItem(new \Ease\Html\DivTag(new \Ease\TWB5\SubmitButton(_('Do it!'), 'primary btn-lg'), ['class' => 'd-grid gap-2']));
 
-        parent::__construct(\AbraFlexi\Functions::uncode($invoice->getRecordIdent()), 'default', $form, $invoice->getDataValue('popis'));
+        parent::__construct(\AbraFlexi\Code::strip($invoice->getRecordIdent()), 'default', $form, $invoice->getDataValue('popis'));
         //        $this->addItem( new \Ease\Html\PreTag(print_r($invoice->getSubItems(),true)));
     }
 
