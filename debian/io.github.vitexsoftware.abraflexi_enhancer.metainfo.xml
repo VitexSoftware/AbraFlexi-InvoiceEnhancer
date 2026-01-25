@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.vitexsoftware.abraflexi_enhancer</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>abraflexi-enhancer</name>
+  <summary>Convert Invoice Items to pricelist Item</summary>
+  <description>
+    <p>
+      External Application for AbraFlexi. Also store Supplier prices.
+    </p>
+  </description>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <url type="homepage">https://github.com/Vitexus/AbraFlexi-InvoiceEnhancer</url>
+  <url type="bugtracker">https://github.com/Vitexus/AbraFlexi-InvoiceEnhancer/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>
