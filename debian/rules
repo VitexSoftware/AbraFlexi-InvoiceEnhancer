@@ -1,20 +1,33 @@
 #!/usr/bin/make -f
-# You must remove unused comment lines for the released package.
-#export DH_VERBOSE = 1
-#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+PKG_VERSION := $(shell dpkg-parsechangelog -S Version | sed 's/~.*//')
+PKG_SOURCE  := $(shell jq -r '.name' composer.json)
+PKG_TYPE    := $(shell jq -r '.type' composer.json)
 
 %:
-	dh $@  
-
-#override_dh_auto_install:
-#	dh_auto_install -- prefix=/usr
+	dh $@
 
 override_dh_install:
-	jq '.version = "'`dpkg-parsechangelog | sed -n 's/^Version: //p'| sed 's/~.*//' `'"'  debian/composer.json |sponge debian/composer.json
 	dh_install
-	sed -i -e '/require_once/c\require_once "\/var\/lib\/composer\/abraflexi-enhancer/autoload.php";' debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/*.php
-	sed -i -e 's/..\/i18n/\/usr\/share\/locale/g'            	        debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/init.php
-	sed -i -e 's/\.\./\/etc\/abraflexi/g'                                   debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/init.php
-	sed -i -e 's/\.\./\/usr\/lib\/abraflexi-enhancer/'       debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/Enhancer/*.php
+	install -d debian/abraflexi-enhancer/usr/share/icons/hicolor/scalable/apps
+	install -m 644 project-logo.svg \
+	    debian/abraflexi-enhancer/usr/share/icons/hicolor/scalable/apps/io.github.vitexsoftware.abraflexi_enhancer.svg
+	install -m 644 debian/autoload.php debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/autoload.php
+	sed -i -e '/require_once/c\require_once "/usr/lib/abraflexi-enhancer/autoload.php";' \
+	    debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/*.php
+	sed -i -e 's/..\/i18n/\/usr\/share\/locale/g' \
+	    debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/init.php
+	sed -i -e 's/\.\./\/etc\/abraflexi/g' \
+	    debian/abraflexi-enhancer/usr/share/abraflexi-enhancer/init.php
+	sed -i -e 's/\.\./\/usr\/lib\/abraflexi-enhancer/' \
+	    debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/Enhancer/*.php
+	sed -i "1a defined('APP_NAME') || define('APP_NAME', '$(PKG_SOURCE)');" \
+	    debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/autoload.php
+	sed -i "s|'unknown'|'$(PKG_SOURCE)'|" \
+	    debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/autoload.php
+	sed -i "s|'0.0.0'|'$(PKG_VERSION)'|" \
+	    debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/autoload.php
+	sed -i "s|'library'|'$(PKG_TYPE)'|g" \
+	    debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/autoload.php
+	sed -i "2a defined('APP_VERSION') || define('APP_VERSION', '$(PKG_VERSION)');" \
+	    debian/abraflexi-enhancer/usr/lib/abraflexi-enhancer/autoload.php

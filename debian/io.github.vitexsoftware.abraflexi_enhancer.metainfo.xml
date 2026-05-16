@@ -4,14 +4,24 @@
   <metadata_license>MIT</metadata_license>
   <project_license>MIT</project_license>
   <name>abraflexi-enhancer</name>
-  <summary>Convert Invoice Items to pricelist Item</summary>
+  <summary>Convert received invoice line items into AbraFlexi pricelist entries</summary>
   <description>
     <p>
-      External Application for AbraFlexi. Also store Supplier prices.
+      AbraFlexi Invoice Enhancer is a web application that adds a trigger button to
+      Received Invoices in AbraFlexi. When activated, it converts free-text invoice
+      line items into structured pricelist entries and stores supplier prices for
+      future reference.
+    </p>
+    <p>
+      Items are matched by EAN code or partner number. New pricelist entries are
+      created automatically when no existing match is found.
     </p>
   </description>
+  <icon type="stock">io.github.vitexsoftware.abraflexi_enhancer</icon>
+  <launchable type="url">http://localhost/abraflexi-enhancer/</launchable>
   <categories>
-    <category>Utility</category>
+    <category>Office</category>
+    <category>Finance</category>
   </categories>
   <url type="homepage">https://github.com/Vitexus/AbraFlexi-InvoiceEnhancer</url>
   <url type="bugtracker">https://github.com/Vitexus/AbraFlexi-InvoiceEnhancer/issues</url>
